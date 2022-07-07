@@ -1,13 +1,14 @@
 #include "main.h"
 /**
- * mul - function
- *
- * @a: parameter 1
- * @b: parameter 2
- *
- * Return: return value
+ * print_numbers - function
  */
-int mul(int a, int b)
+void print_numbers(void)
 {
-	return (a * b);
+	int n = 48;
+
+	while (n < 58)
+	{
+		_putchar(n++);
+	}
+	_putchar(10);
 }
