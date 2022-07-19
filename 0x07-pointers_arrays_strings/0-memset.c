@@ -1,14 +1,6 @@
 #include "main.h"
-/**
- * _memset - fills memory with a constnt byte
- *
- * @n: buffer size
- * @s: bytes of the memory area pointed
- * @b: the constant byte
- *
- * Return: a pointer to the memory area s.
- */
-char *_memet(char *s, char b, unsigned int n)
+
+char *_memset(char *s, char b, unsigned int n)
 {
 	unsigned int x;
 
@@ -17,4 +9,4 @@ char *_memet(char *s, char b, unsigned int n)
 		*(s + x) = b;
 	}
 	return (s);
-}
+i}
