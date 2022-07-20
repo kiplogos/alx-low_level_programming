@@ -1,7 +1,8 @@
 #include "main.h"
-/*
- * _strlen_recursion - function to count the 
+/**
+ * _strlen_recursion - function to the
  * number of characters in the string
+ *
  * @s: parameter
  *
  * Return: end function
@@ -13,7 +14,7 @@ int _strlen_recursion(char *s)
 	if (*s != '\0')
 	{
 		s++;
-		n = n + _strlen_recursion(s);
+		n = n + _strlen_recurssions(s);
 
 		return (n);
 	}
