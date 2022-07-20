@@ -1,4 +1,4 @@
-*include "main.h"
+#include "main.h"
 /**
  *  factorial - function to return the factorial
  *  of n
