@@ -1,16 +1,22 @@
 #include "main.h"
-/**
- * _print_rev_recursion - function that reverse
- * the string
+/*
+ * _strlen_recursion - function to count the 
+ * number of characters in the string
+ * @s: parameter
  *
- *  @s: parameter
+ * Return: end function
  */
-void _print_rev_recursion(char *s)
+int _strlen_recursion(char *s)
 {
-	if (*s != 0)
+	int n = 1;
+
+	if (*s != '\0')
 	{
-		_print_rev_recursion(s + 1);
-		_putchar(*s);
+		s++;
+		n = n + _strlen_recursion(s);
+
+		return (n);
 	}
 
+	return (0);
 }
