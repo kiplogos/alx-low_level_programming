@@ -8,7 +8,7 @@
  *
  * Return: Return the new array
  */
-char *_strdub(char *str)
+char *_strdup(char *str)
 {
 	char *a;
 	void *x = NULL;
