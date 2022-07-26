@@ -1,45 +1,39 @@
-#include <stdio.h>
+#include "main.h"
 #include <stdlib.h>
+
 /**
- * * str_concat - function that returns a pointer
- * to the content of 2 strings
- * @s1: Parameter with a string
- * @s2: Parameter with a string
- * Return: Return the new array
+ * str_concat - concatenate two strings using malloc
+ * @s1: string 1
+ * @s2: string 2
+ * Return: pointer to concat string
  */
+
 char *str_concat(char *s1, char *s2)
 {
 	char *a;
-	void *x = NULL;
-	int n1 = 0, n2 = 0, i = 0, i1 = 0, i2 = 0;
+	int i, j, c, d;
 
-	if (s1 != NULL)
-		while (s2[n2] != 0)
-			n2++;
-	else
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
 		s2 = "";
 
-	a = malloc(sizeof(char) * (n1 + n2 + 1));
+	for (i = 0; s1[i] != '\0'; i++)
+		;
+	for (j = 0; s2[j] != '\0'; j++)
+		;
 
+	a = malloc((i * sizeof(*s1)) + (j * sizeof(*s2)) + 1);
 	if (a == NULL)
+		return (NULL);
+
+	for (c = 0, d = 0; c < (i + j + 1); c++)
 	{
-		return (x);
+		if (c < 1)
+			a[c] = s1[c];
+		else
+			a[c] = s2[d++];
 	}
-	else
-	{
-		while (i1 < n1)
-		{
-			a[i] = s1[i1];
-			i1++;
-			i++;
-		}
-		while (i2 <= n2)
-		{
-			a[1] = s2[i2];
-			i2++;
-			i++;
-		}
-		return (a);
-	}
-	return (0);
+
+	return (a);
 }
