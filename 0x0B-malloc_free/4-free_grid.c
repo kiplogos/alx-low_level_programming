@@ -2,9 +2,9 @@
 #include <stdlib.h>
 
 /**
- * free_grid - frees the memory allocate for the gridcreated by alloc_grid()
- * @grid: grid to free
- * @height: height of the grid
+ * free_grid - free up a 2d grid
+ * @grid: double pointer 2 grid
+ * @height: height of grid
  */
 
 void free_grid(int **grid, int height)
